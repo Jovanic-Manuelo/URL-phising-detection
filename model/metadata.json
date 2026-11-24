@@ -1,7 +1,7 @@
 {
-  "model_name": "Random Forest",
-  "threshold": 0.6,
-  "trained_at": "2026-11-24 11:39",
+  "model_name": "Hist Gradient Boosting",
+  "threshold": 0.7,
+  "trained_at": "2026-11-24 14:02",
   "sklearn_version": "1.9.1",
   "feature_names": [
     "url_length",
@@ -57,16 +57,16 @@
     "method": "GroupShuffleSplit per domain (70/15/15)"
   },
   "test_metrics": {
-    "accuracy": 0.94,
-    "precision": 0.8658,
-    "recall": 0.8461,
-    "f1": 0.8558
+    "accuracy": 0.9417,
+    "precision": 0.878,
+    "recall": 0.8399,
+    "f1": 0.8585
   },
   "confusion_matrix": {
-    "tn": 50027,
-    "fp": 1814,
-    "fn": 2129,
-    "tp": 11704
+    "tn": 50226,
+    "fp": 1615,
+    "fn": 2215,
+    "tp": 11618
   },
   "validation_comparison": [
     {
@@ -75,7 +75,10 @@
       "val_precision": 0.0,
       "val_recall": 0.0,
       "val_f1": 0.0,
+      "val_roc_auc": 0.5,
+      "val_pr_auc": 0.2106,
       "train_f1": 0.0,
+      "train_pr_auc": 0.2106,
       "waktu_latih_detik": 0.0
     },
     {
@@ -84,8 +87,11 @@
       "val_precision": 0.6695,
       "val_recall": 0.7617,
       "val_f1": 0.7126,
+      "val_roc_auc": 0.9094,
+      "val_pr_auc": 0.8167,
       "train_f1": 0.7077,
-      "waktu_latih_detik": 1.7
+      "train_pr_auc": 0.8115,
+      "waktu_latih_detik": 2.2
     },
     {
       "model": "Random Forest",
@@ -93,8 +99,11 @@
       "val_precision": 0.7988,
       "val_recall": 0.8844,
       "val_f1": 0.8394,
+      "val_roc_auc": 0.972,
+      "val_pr_auc": 0.9317,
       "train_f1": 0.8626,
-      "waktu_latih_detik": 22.8
+      "train_pr_auc": 0.9519,
+      "waktu_latih_detik": 22.0
     },
     {
       "model": "Hist Gradient Boosting",
@@ -102,8 +111,11 @@
       "val_precision": 0.7747,
       "val_recall": 0.8981,
       "val_f1": 0.8319,
+      "val_roc_auc": 0.9731,
+      "val_pr_auc": 0.9358,
       "train_f1": 0.8397,
-      "waktu_latih_detik": 10.0
+      "train_pr_auc": 0.9416,
+      "waktu_latih_detik": 10.9
     }
   ],
   "test_comparison": [
@@ -123,33 +135,33 @@
     },
     {
       "model": "Random Forest",
-      "accuracy": 0.94,
-      "precision": 0.8658,
-      "recall": 0.8461,
-      "f1": 0.8558
+      "accuracy": 0.9296,
+      "precision": 0.801,
+      "recall": 0.8857,
+      "f1": 0.8413
     },
     {
       "model": "Hist Gradient Boosting",
-      "accuracy": 0.9241,
-      "precision": 0.7763,
-      "recall": 0.8986,
-      "f1": 0.833
+      "accuracy": 0.9417,
+      "precision": 0.878,
+      "recall": 0.8399,
+      "f1": 0.8585
     }
   ],
   "external_test": {
     "n": 51273,
-    "recall": 0.7873
+    "recall": 0.7907
   },
   "top_features": {
-    "is_common_tld": 0.1028,
-    "n_hyphens_path": 0.0545,
-    "n_suspicious_words": 0.0543,
-    "has_php": 0.0509,
-    "path_depth": 0.0318,
-    "n_digits_path": 0.023,
-    "longest_path_token": 0.019,
-    "brand_outside_domain": 0.0156,
-    "has_html": 0.015,
-    "host_entropy": 0.0133
+    "path_length": 0.1275,
+    "is_common_tld": 0.0782,
+    "n_special_total": 0.0774,
+    "path_entropy": 0.058,
+    "n_question": 0.0555,
+    "path_depth": 0.0547,
+    "n_digits_path": 0.0512,
+    "n_suspicious_words": 0.051,
+    "n_hyphens_path": 0.0463,
+    "longest_path_token": 0.0349
   }
 }
